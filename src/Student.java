@@ -3,21 +3,46 @@ public class Student {
     private String name;
     private String major;
     private String gender;
+    private int age;
+    private int tel;
     private boolean deleted = false;
 
-    public Student(int studentID, String name, String major, String gender) {
+    public Student(int studentID, String name, String major, String gender, int age, int tel) {
         this.studentID = studentID;
         this.name = name;
         this.major = major;
         this.gender = gender;
+        this.age = age;
+        this.tel = tel;
     }
 
-    public boolean isDeleted() {
-        return deleted;
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getTel() {
+        return tel;
+    }
+
+    public void setTel(int tel) {
+        this.tel = tel;
     }
 
     public void setDeleted(boolean deleted) {
         this.deleted = deleted;
+    }
+
+
+    boolean isDeleted() {
+        return deleted;
+    }
+
+    void setDeleted() {
+        this.deleted = true;
     }
 
     public int getStudentID() {
@@ -28,7 +53,7 @@ public class Student {
         this.studentID = studentID;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 

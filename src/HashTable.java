@@ -42,7 +42,7 @@ public class HashTable {
     boolean hashDelete(String key) {
         Student student = hashSearch(key);
         if (student == null) return false;
-        student.setDeleted(true);
+        student.setDeleted();
         return true;
     }
 

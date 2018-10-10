@@ -1,6 +1,6 @@
 import org.jetbrains.annotations.Contract;
 
-public class HashTable {
+class HashTable {
     private Student[] students = new Student[100];
 
     Student hashSearch(String key) {

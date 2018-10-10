@@ -7,7 +7,7 @@ public class Student {
     private int tel;
     private boolean deleted = false;
 
-    public Student(int studentID, String name, String major, String gender, int age, int tel) {
+    Student(int studentID, String name, String major, String gender, int age, int tel) {
         this.studentID = studentID;
         this.name = name;
         this.major = major;

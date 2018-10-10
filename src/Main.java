@@ -1,7 +1,17 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Scanner;
 
 public class Main {
-
+    /**
+     * The main function imports data from the file which is in
+     * the UTF-8 format, and then calls the {@code testData} function
+     * to perform the testing task specified in the requirements.
+     * <p>
+     * This method also handles the potential exception thrown from
+     * reading file function and then prints the corresponding error
+     * information.
+     */
     public static void main(String[] args) {
         HashTable hashTable = new HashTable();
         try {
@@ -13,6 +23,16 @@ public class Main {
         testData(hashTable);
     }
 
+    /**
+     * This function imports data from the file located at the specified String
+     * Then an Student object is created in the function according to the data
+     * types. After that, it calls the function in the HashTable class to
+     * insert such object into the table.
+     *
+     * @param hashTable The hashTable object that this function is operating on
+     * @throws Exception if there is problem reading file or accomplishing other
+     *                   tasks.
+     */
     private static void importData(HashTable hashTable) throws Exception {
         java.io.File file = new java.io.File(
                 "D:\\Documents\\Data Structures and Algorithms\\Lab\\Lab4\\Book1.csv");
@@ -29,7 +49,13 @@ public class Main {
         input.close();
     }
 
-    private static void testData(HashTable hashTable) {
+    /**
+     * This function tests the search method with all the samples given.
+     * It prints the time consumed to perform all the searches.
+     *
+     * @param hashTable The hashTable object that this function is operating on
+     */
+    private static void testData(@NotNull HashTable hashTable) {
         long time = System.currentTimeMillis();
         System.out.println(hashTable.hashSearch("苏沃").getStudentID());
         System.out.println(hashTable.hashSearch("叶青").getStudentID());

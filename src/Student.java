@@ -1,3 +1,10 @@
+/**
+ * This class implements a student type object. Such objects are the elements
+ * in the following HashTable element. The attributes are listed as required,
+ * and the relative constructor, getter and setter method is shown.
+ *
+ * @author Wang, Chen
+ */
 public class Student {
     private long studentID;
     private String name;

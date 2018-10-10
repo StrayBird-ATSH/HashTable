@@ -1,7 +1,7 @@
 import org.jetbrains.annotations.Contract;
 
 class HashTable {
-    private Student[] students = new Student[100];
+    Student[] students = new Student[101];
 
     Student hashSearch(String key) {
         int probe = 0;
@@ -49,7 +49,7 @@ class HashTable {
     private int hashFunction(String key, int probe) {
         key = key.concat(Integer.toString(probe));
         int hash = getHashCode(key);
-        return (hash & 0x7FFFFFFF) % 100;
+        return (hash & 0x7FFFFFFF) % 101;
     }
 
     @Contract(pure = true)

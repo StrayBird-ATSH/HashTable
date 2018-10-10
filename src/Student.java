@@ -1,13 +1,21 @@
 public class Student {
-    private int studentID;
+    private long studentID;
     private String name;
     private String major;
     private String gender;
     private int age;
-    private int tel;
+    private long tel;
     private boolean deleted = false;
 
-    Student(int studentID, String name, String major, String gender, int age, int tel) {
+    long getStudentID() {
+        return studentID;
+    }
+
+    public long getTel() {
+        return tel;
+    }
+
+    Student(long studentID, String name, String major, String gender, int age, long tel) {
         this.studentID = studentID;
         this.name = name;
         this.major = major;
@@ -24,9 +32,6 @@ public class Student {
         this.age = age;
     }
 
-    public int getTel() {
-        return tel;
-    }
 
     public void setTel(int tel) {
         this.tel = tel;
@@ -43,10 +48,6 @@ public class Student {
 
     void setDeleted() {
         this.deleted = true;
-    }
-
-    public int getStudentID() {
-        return studentID;
     }
 
     public void setStudentID(int studentID) {

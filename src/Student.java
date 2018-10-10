@@ -3,12 +3,21 @@ public class Student {
     private String name;
     private String major;
     private String gender;
+    private boolean deleted = false;
 
     public Student(int studentID, String name, String major, String gender) {
         this.studentID = studentID;
         this.name = name;
         this.major = major;
         this.gender = gender;
+    }
+
+    public boolean isDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
     }
 
     public int getStudentID() {

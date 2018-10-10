@@ -1,8 +1,13 @@
 public class HashTable {
     private Student[] students = new Student[100];
 
-    void hashSearch() {
-
+    Student hashSearch(String key) {
+        int probe = 0;
+        int index = hashFunction(key, probe);
+        for (; students[index] != null && !students[index].getName().equals(key);
+             index = hashFunction(key, probe))
+            probe++;
+        return students[index];
     }
 
     Student hashInsert(String key, Student studentObject) {
